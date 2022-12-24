@@ -1,0 +1,38 @@
+#include <stdio.h>
+//#include<conio.h>
+#include <string.h>
+
+
+int main()
+{
+
+int num[100],n,i,j;
+printf("how many elements you enter");
+scanf("%d",&n);
+printf("Enter %d elements",n);
+for(i=0;i<n;i++)
+{
+scanf("%d",&num[i]);
+}
+
+for(i=0;i<n;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(num[j]>num[i])
+{
+num[i]=num[i]+num[j];
+num[j]=num[i]-num[j];
+num[i]=num[i]-num[j];
+
+}
+}
+}
+printf("Sorted in Ascending order");
+for(i=0;i<n;i++)
+{
+printf("%d",num[i]);
+}
+
+
+}
